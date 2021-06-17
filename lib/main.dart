@@ -27,7 +27,7 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("이벤트 3 UI"),
+        title: Text("Event3 UI"),
         centerTitle: true,
       ),
       body: Container( //회색 컨테이
