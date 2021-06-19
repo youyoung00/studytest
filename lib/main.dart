@@ -41,13 +41,13 @@ class Main extends StatelessWidget {
             Container( // 파란컨테이너
               //color: Colors.green,
               alignment: Alignment.topLeft,
-              width: 230,
+              width: 258,
               height: MediaQuery.of(context).size.height,
-              padding: EdgeInsets.only(top: 10.0, left: 10.0, right: 10.0, bottom: 10.0),
-
+              padding: EdgeInsets.only(top: 10.0, left: 10.0, right: 5.0, bottom: 10.0),
               child: Column(
                 children: [
-                  Container( // 아이콘컨테이너
+                  Container(
+                    // 아이콘컨테이너
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.fill,
@@ -79,29 +79,59 @@ class Main extends StatelessWidget {
             ),
           ),
             Container(
-              width: 150,
-              color: Colors.greenAccent,
-              padding: EdgeInsets.only(top: 20.0, left: 5.0,),
+              margin: EdgeInsets.all(10.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
+                    //color: Colors.orange,
+                    padding: EdgeInsets.only(top: 30.0),
                     child: Text("SubTitle",
+                    //textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20.0,
+                      //color: Colors.lime
                       ),
                     ),
                   ),
+                  SizedBox(height: 30,),
                   Container(
-                    color: Colors.pink,
+                      width: 100,
+                      height: 150,
+                      child: SingleChildScrollView(
+                          child: Text("descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription")
+                    )
                   ),
-                  Container(),
+                  SizedBox(height: 30,),
+                    Container(
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 100,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage("https://images.unsplash.com/photo-1561238160-3fd50893667f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zmxvd2VyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"),
+                                    fit: BoxFit.fill
+                                )
+                              ),
+                            ),
+                            Container(
+                              height: 30.0,
+                              color: Colors.white,
+                              width: 100,
+                              child: Text('이미지1',textAlign: TextAlign.center,),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-            ),
+            )
           ]
-        )
-      )
+        ),
+      ),
     );
   }
 }
